@@ -244,7 +244,7 @@ export default function DetalhesOcorrencias() {
               <button
                 className="px-4 py-1 rounded bg-[#e3e8ee] text-[#222] font-semibold"
                 onClick={() =>
-                  navigate(`/detalhesocorrencias/${occurrence.id}/editar`)
+                  navigate(`/detalhesocorrencias/${occurrence.id}/edit`)
                 }
               >
                 Editar

@@ -5,7 +5,6 @@ import { MapView } from "@/components/mapView";
 import Stats from "@/components/Stats";
 // import Stats from "@/components/Stats";
 
-// lazy das suas rotas existentes
 const Relatorios = lazy(() => import("@/screens/relatorios/relatorios"));
 const NovaOcorrencia = lazy(
   () => import("@/screens/novaocorrencia/novaocorrencia")
@@ -30,7 +29,6 @@ const Home: React.FC = () => {
       <MainHeader />
 
       <section className="px-8 mt-2 mb-6 max-w-[1200px] mx-auto">
-        {/* título + subtítulo */}
         <div className="mb-6">
           <div className="bg-white shadow-lg border border-gray-200 p-8 rounded-md">
             <h1 className="text-4xl font-extrabold text-gray-800 mb-2">
@@ -42,12 +40,10 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* tabs controladas */}
         <div className="mb-6">
           <TabsNav active={activeTab} onChange={setActiveTab} />
         </div>
 
-        {/* conteúdo da aba */}
         <div className="bg-transparent">
           <Suspense
             fallback={
@@ -58,11 +54,9 @@ const Home: React.FC = () => {
           >
             {activeTab === "mapa" && (
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                {/* mapa ocupa 2 colunas no desktop */}
                 <div className="lg:col-span-2">
                   <MapPanel />
                 </div>
-                {/* painel lateral */}
                 <div className="lg:col-span-1">
                   <Stats />
                 </div>

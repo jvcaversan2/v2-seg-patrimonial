@@ -6,7 +6,7 @@ import Register from "./screens/auth/register";
 import DetalhesOcorrencias from "./screens/detalhesocorrencias/detalhesocorrencias";
 // import PerfilConfiguracao from "./screens/perfilconfiguracao/perfilconfiguracao";
 // import Relatorios from "./screens/relatorios/relatorios";
-// import EditarOcorrencias from "./screens/editarocorrencia/editarocorrencia";
+import EditarOcorrencias from "./screens/editarocorrencia/editarocorrencia";
 import { PrivateRoute } from "./store/privateRoutes";
 import { PublicRoute } from "./store/publicRoute"; // <-- novo
 import Home from "./screens/home/Home";
@@ -68,9 +68,17 @@ function App() {
             </PrivateRoute>
           }
         />
+        <Route
+          path="/detalhesocorrencias/:id/edit"
+          element={
+            <PrivateRoute>
+              <EditarOcorrencias />
+            </PrivateRoute>
+          }
+        />
+
         {/* 
         
-        <Route path="/detalhesocorrencias/:id/editar" element={<PrivateRoute><EditarOcorrencias /></PrivateRoute>} />
         <Route path="/perfilconfiguracao" element={<PrivateRoute><PerfilConfiguracao /></PrivateRoute>} />
         <Route path="/relatorios" element={<PrivateRoute><Relatorios /></PrivateRoute>} />
         <Route path="/auditoria" element={<PrivateRoute><div className="p-6">Página de Auditoria</div></PrivateRoute>} />
