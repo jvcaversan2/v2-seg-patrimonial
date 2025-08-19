@@ -74,11 +74,14 @@ export default function MainHeader() {
                   Admin
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-56">
+              <DropdownMenuContent
+                align="end"
+                className="w-56 bg-white shadow-lg rounded-md"
+              >
                 <DropdownMenuLabel>Minha Conta</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem
-                  onClick={() => navigate("/perfilconfiguracao")} // redireciona
+                  onClick={() => navigate("/perfilconfiguracao")}
                 >
                   <User className="mr-2 h-4 w-4" />
                   Perfil
